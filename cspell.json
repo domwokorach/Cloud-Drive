@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "firebase",
+    "firestore",
+    "Firestore",
+    "adminsdk",
+    "fbsvc",
+    "authdomain",
+    "messagingsenderid",
+    "measurementid",
+    "nextconfig"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    ".next"
+  ]
+}

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #1a73e8;
+  --primary-hover: #1557b0;
+  --primary-light: #e8f0fe;
+  --primary-subtle: #c2d7fa;
+
+  --surface: #ffffff;
+  --surface-2: #f8f9fb;
+  --surface-3: #eef1f6;
+
+  --border: #d0d5dd;
+  --border-light: #e4e7ec;
+
+  --text-1: #1a1d21;
+  --text-2: #4a5568;
+  --text-3: #7a8494;
+
+  --shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-sm: 0 2px 4px rgba(16, 24, 40, 0.08);
+  --shadow: 0 4px 8px rgba(16, 24, 40, 0.08);
+  --shadow-md: 0 6px 16px rgba(16, 24, 40, 0.1);
+  --shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.12);
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --header-height: 64px;
+  --sidebar-width: 240px;
+  --bottom-nav-height: 60px;
+  --mobile-fab-size: 56px;
+  --mobile-fab-gap: 16px;
+  --mobile-scroll-inset: calc(
+    var(--bottom-nav-height) + var(--mobile-fab-size) + var(--mobile-fab-gap) + 24px + env(safe-area-inset-bottom, 0px)
+  );
+
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --file-image: #6366f1;
+  --file-image-bg: rgba(99, 102, 241, 0.1);
+  --file-pdf: #be123c;
+  --file-pdf-bg: rgba(190, 18, 60, 0.09);
+  --file-video: #0284c7;
+  --file-video-bg: rgba(2, 132, 199, 0.1);
+  --file-audio: #d97706;
+  --file-audio-bg: rgba(217, 119, 6, 0.1);
+  --file-other: #64748b;
+  --file-other-bg: rgba(100, 116, 139, 0.1);
+  --file-gif: #9333ea;
+  --file-gif-bg: rgba(147, 51, 234, 0.1);
+  --trash: #78716c;
+  --trash-bg: rgba(120, 113, 108, 0.12);
+  --danger: #dc2626;
+  --danger-bg: rgba(220, 38, 38, 0.08);
+
+  --focus-scroll-inset: 24px;
+
+  --tooltip-bg: #3c4043;
+  --tooltip-text: #ffffff;
+  --tooltip-radius: 6px;
+  --tooltip-padding: 6px 10px;
+  --tooltip-font-size: 0.75rem;
+  --tooltip-shadow: 0 1px 2px rgba(0, 0, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.14);
+  --tooltip-z: 10050;
+}
+
+[data-theme="dark"] {
+  --primary: #6ea8fe;
+  --primary-hover: #539af5;
+  --primary-light: rgba(110, 168, 254, 0.12);
+  --primary-subtle: rgba(110, 168, 254, 0.22);
+
+  --surface: #1e2433;
+  --surface-2: #283045;
+  --surface-3: #171c28;
+
+  --border: #3a4459;
+  --border-light: #2e384c;
+
+  --text-1: #e8ecf4;
+  --text-2: #b0b8d1;
+  --text-3: #7a8499;
+
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.5);
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+
+  --file-image: #b0b8d1;
+  --file-image-bg: #3a4256;
+  --file-pdf: #e57373;
+  --file-pdf-bg: #443c48;
+  --file-video: #7eb8da;
+  --file-video-bg: #2e4256;
+  --file-audio: #d4a574;
+  --file-audio-bg: #3d3828;
+  --file-other: #94a3b8;
+  --file-other-bg: #2f3644;
+  --file-gif: #c4a8e0;
+  --file-gif-bg: #3d3656;
+  --trash: #9ca3af;
+  --trash-bg: rgba(156, 163, 175, 0.14);
+  --danger: #e57373;
+  --danger-bg: rgba(229, 115, 115, 0.14);
+}
+
+[data-theme="dark"] *::-webkit-scrollbar-thumb {
+  background: #3a4459;
+}
+
+[data-theme="dark"] *::-webkit-scrollbar-thumb:hover {
+  background: #4a5568;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #bdc1c6;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #9aa0a6;
+}
+
+html, body {
+  font-family: 'Inter', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  color: var(--text-1);
+  background: var(--surface-3);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+[data-focus-mode="true"] {
+  --mobile-scroll-inset: var(--focus-scroll-inset);
+}
+
+[data-focus-mode="true"] header {
+  background: var(--surface);
+  border-bottom-color: var(--border-light);
+}
+
+/* Product tour (driver.js) themed to match the app */
+.driver-popover.disk-drive-tour {
+  background: var(--surface);
+  color: var(--text-1);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 20px;
+  max-width: 320px;
+}
+
+.driver-popover.disk-drive-tour .driver-popover-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-1);
+  letter-spacing: -0.2px;
+}
+
+.driver-popover.disk-drive-tour .driver-popover-description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.driver-popover.disk-drive-tour .driver-popover-description b {
+  color: var(--text-1);
+}
+
+.driver-popover.disk-drive-tour .driver-popover-progress-text {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-3);
+}
+
+.driver-popover.disk-drive-tour .driver-popover-close-btn {
+  color: var(--text-3);
+  transition: color 0.15s ease;
+}
+
+.driver-popover.disk-drive-tour .driver-popover-close-btn:hover {
+  color: var(--text-1);
+}
+
+.driver-popover.disk-drive-tour .driver-popover-footer button {
+  text-shadow: none;
+  border-radius: var(--radius-full);
+  padding: 7px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-2);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.driver-popover.disk-drive-tour .driver-popover-footer button:hover {
+  background: var(--surface-3);
+  color: var(--text-1);
+}
+
+.driver-popover.disk-drive-tour .driver-popover-footer .driver-popover-next-btn {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.driver-popover.disk-drive-tour .driver-popover-footer .driver-popover-next-btn:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #ffffff;
+}
+
+.driver-popover.disk-drive-tour .driver-popover-arrow {
+  color: var(--surface);
+}
