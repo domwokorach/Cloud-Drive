@@ -2,7 +2,7 @@ import "./globals.css";
 import Providers from "./Providers";
 
 export const metadata = {
-  title: "Disk Drive",
+  title: "Cloud Drive",
   icons: {
     icon: "/disk-drive-logo.svg",
   },

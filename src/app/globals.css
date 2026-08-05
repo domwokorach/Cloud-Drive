@@ -253,3 +253,59 @@ input, textarea {
 .driver-popover.disk-drive-tour .driver-popover-arrow {
   color: var(--surface);
 }
+
+/* File grid and card utilities */
+.file-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  align-items: start;
+  padding: 8px;
+}
+@media (min-width: 1024px) {
+  .file-grid {
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.file-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 120px;
+}
+.file-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-subtle);
+}
+.file-card .file-thumb {
+  height: 88px;
+  border-radius: calc(var(--radius) - 4px);
+  background: var(--file-image-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-card .file-name {
+  font-weight: 600;
+  color: var(--text-1);
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .page-container { padding: 12px; }
+}
