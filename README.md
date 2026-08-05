@@ -2,7 +2,7 @@
 
 A full-stack Google Drive–style cloud storage app built with **Next.js**, **Firebase**, and **AWS S3**. Users can upload, preview, organize, star, search, and trash files with a responsive UI for desktop and mobile.
 
-**Live demo:** [google-drive-clone-roan.vercel.app](https://google-drive-clone-roan.vercel.app/)
+**Live demo:** [google-drive-clone-roan.vercel.app]([https://google-drive-clone-roan.vercel.app/](https://cloud-drive-brown.vercel.app/))
 
 ---
 
